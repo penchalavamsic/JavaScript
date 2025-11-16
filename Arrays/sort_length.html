@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <script>
+            //sorting names by even length
+            let a=[]
+            for(let i=0;i<10;i++){
+                a[i]=prompt("Enter name")
+            }
+            for(let i=0;i<10;i++){
+                let word=a[i]
+                //checking condition
+                if(word.length%2==0&&(word.startsWith('A')||word.startsWith('a'))){
+                    document.writeln(word+"<br>")
+                    found=true
+                }
+            }
+            if(!found)
+            document.writeln("Invalid name")
+        </script>
+    </body>
+</html>
