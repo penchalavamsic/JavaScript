@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script>
+            let a=[5,4,88,3,6]
+            b=a.length
+            let sum=0
+            for(let i=0;i<b;i++){
+                sum=sum+a[i]
+            }
+            avg=sum/b
+            document.writeln("Average is "+avg+"<br>")
+            for(let i=0;i<b;i++){
+                if(a[i]>avg){
+                    document.write(a[i])
+                }
+            }
+        </script>
+    </body>
+</html>
