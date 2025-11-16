@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <script>
+            d=new Date();
+            var days=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]; //get the number and convert to corresponding day
+            var months=["January","February","March","April","May","June","July","August","September","October","November","December"];//get the number and convert to corresponding day
+            var date=d.getDate();
+            var dayName=days[d.getDay()];
+            var monthName=months[d.getMonth()];
+            var year=d.getFullYear();
+            document.write("Today is "+dayName+", "+date+monthName+" "+year+", Welcome , and Good Afternoon to you");
+            </script>
+    </body>
+</html>
