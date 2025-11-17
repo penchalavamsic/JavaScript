@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <script>
+            function circle(radius){
+                this.radius=radius
+                this.area=function(){
+                    return 3.14*this.radius*this.radius
+                }
+                this.circumference=function(){
+                    return 2*3.14*this.radius
+                }
+            }
+            function rectangle(length,breadth){
+                this.length=length
+                this.breadth=breadth
+                this.area=function(){
+                    return this.length*this.breadth
+                }
+                this.perimeter=function(){
+                    return 2*(this.length+this.breadth)
+                }
+            }
+            var a=new circle(5)
+            document.writeln("Area of circle is "+a.area()+"<br>")
+            document.writeln("Circumference of circle is "+a.circumference()+"<br>")
+            var b=new rectangle(10,5)
+            document.writeln("Area of rectangle is "+b.area()+"<br>")
+            document.writeln("Perimeter of rectangle is "+b.perimeter()+"<br>")
+
+        </script>
+    </body>
+</html>
