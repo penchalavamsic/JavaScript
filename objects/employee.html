@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <script>
+            function employee(id, name, salary){
+                this.id=id
+                this.name=name
+                this.salary=salary
+            }
+            let emp=[
+                new employee(1,"Ram",10000),
+                new employee(2,"Shyam",20000),
+                new employee(3,"Gita",30000)
+            ]
+            document.write("<table border=1 cellspacing=0>")
+                document.write("<tr><th>ID</th><th>Name</th><th>Salary</th>")
+            for(a of emp){
+                document.write("<tr>")
+                for(b in a){
+                        document.write("<td>"+a[b]+"</td>")
+                }
+                document.write("</tr>")
+            }
+
+            document.write("</table>")
+                
+            
+        </script>
+    </body>
+</html>
