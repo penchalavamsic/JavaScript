@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <script>
+            class student{
+                constructor(name,rollno){
+                    this.name=name
+                    this.rollno=rollno
+                }
+                getDetails(){
+                    document.writeln(this.name+" "+this.rollno)
+                }
+            }
+            class GraduateStudent extends student{
+                constructor(name, rollno, gpa){
+                    super(name, rollno)
+                    this.gpa=gpa
+                }
+                getDetails(){
+                    document.writeln(this.name+" "+this.rollno+" "+this.gpa)
+                }
+            }
+            let a=new GraduateStudent("Hari",68,9.5)
+            a.getDetails()
+        </script>
+    </body>
+</html>
