@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <input type="text" id="clock" ><br>
+        <script>
+            var int=setInterval(function(){
+                var date=new Date()
+                document.getElementById("clock").value=date //gets the date
+            },5000)
+            </script>
+            <input type="button" value="stop" onclick="clearInterval(int)"/><!--stops the clock-->
+            <!--setTimeOut-->
+            <script>
+                function timedMsg(){
+                    var t=setTimeout(function(){
+                        document.write("Timed Message")
+                    },2000)
+                }
+
+            </script>
+            <input type="button" value="click" onClick="timedMsg()"/>
+    </body>
+
+</html>
