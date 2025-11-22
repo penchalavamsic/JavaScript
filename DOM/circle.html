@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            function calculate(){
+                var r=Number(document.getElementById("r").value)
+                var area=Math.PI*r*r
+                var circum=2*Math.PI*r
+                
+                    //displaying
+               document.getElementById("area").innerHTML="Area is "+area
+               document.getElementById("circum").innerHTML="Circumference is "+circum
+            }
+        </script>
+
+    </head>
+    <body>
+        Enter radius:<input type="text" id="r"><br/>
+        <input type="button" value="click" onclick="calculate()"/>
+        <p id="area"></p>
+        <p id="circum"></p>
+    </body>
+</html>
