@@ -1,0 +1,19 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <p id="r"></p>
+        <script>
+            var names = ["john","ian","steve","marie","jane"]
+            var output=names.map(function(n){ //for traversal
+                return n.toUpperCase()
+            }
+            )
+            var result=output.join(",") //for ','
+            document.getElementById("r").innerHTML=result
+
+        </script>
+        
+    </body>
+</html>
