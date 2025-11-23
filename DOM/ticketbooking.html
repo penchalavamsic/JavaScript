@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script>
+            function book(){
+                var name=document.getElementById("name").value
+                var email=document.getElementById("email").value
+                var cemail=document.getElementById("cemail").value
+                var stand=document.getElementById("stand").value
+                var error=document.getElementById("error")
+                if(email!=cemail){
+                    error.textContent="Emails do not match"
+                    error.style.color="red"
+                }
+                switch(stand){
+                    case "1":
+                        document.getElementById("cost").value=25000
+                        break;
+                    case "2":
+                        document.getElementById("cost").value=20000
+                        break;
+                    case "3":
+                        document.getElementById("cost").value=6000
+                        break;
+                    case "4":
+                        document.getElementById("cost").value=3000
+                        break;
+                }
+                
+            }
+        </script>
+    </head>
+    <body>
+        Spectator Name:<input type="text" id="name" required><br><br>
+        Email Id:<input type="text" id="email" required><br><br>
+        Confirm Mail Id:<input type="text" id="cemail" required><span id="error"></span><br><br>
+        select stand:<select id="stand" size="4">
+            <option value="1">Platinum Gallery</option>
+            <option value="2">North West Stand</option>
+            <option value="3">East Stand</option>
+            <option value="4">Super Hospitatlity Stand</option>
+            </select><br><br>
+        Cost of Ticket:<input type="text" id="cost"><br>
+        <input type="button" value="Book Ticket" onclick="book()"/><br>
+    </body>
+</html>
