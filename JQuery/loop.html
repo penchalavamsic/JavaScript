@@ -1,0 +1,23 @@
+<html>
+    <head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("div1").each(function(){
+                if($(this).attr("class")){
+                    let content=$(this).text()
+                    $("#result").text(content)
+                        
+                    )
+                }
+            })
+        
+    })
+    </script>
+    </head>
+    <div id="div1" class="highlight">Div 1</div>
+  <div id="div2">Div 2</div>
+  <div id="div3">Div 3</div>
+
+  <h3 id="result"></h3>
+</html>
