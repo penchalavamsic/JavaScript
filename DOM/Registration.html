@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <script>
+            let students = []
+            function validate() {
+                var username = document.getElementById("username").value
+                var password = document.getElementById("password").value
+                var email = document.getElementById("email").value
+                
+                //object
+                let details={
+                    username:username,
+                    password:password,
+                    email:email
+                }
+                //adding object to array
+                students.push(details)
+                //clearing form data
+                document.getElementById("regform").reset()
+                displayDetails()
+                function displayDetails(){
+                    let tbody=document.getElementById("tbody")
+                    tbody.innerHTML=""
+                    students.forEach((student)=>{
+                        
+                     let row=`   <tr>
+                        <td>${student.username}</td>
+                        <td>${student.password}</td>
+                        <td>${student.email}</td>
+                        </tr>`
+                        tbody.innerHTML+=row
+                        
+                    })
+                }
+            }
+        </script>
+    </head>
+    <body>
+    <form id="regform">
+        username:<input type="text" id="username" ><br>
+        password:<input type="password" id="password" ><br>
+        email:<input type="text" id="email" required><br>
+        <input type="button" value="Add" onclick="validate()"/>
+        <table border="1">
+            <tr>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Email</th>
+            </tr>
+            <tbody id="tbody"></tbody>
+        </table>
+    </form>
+    </body>
+</html>
